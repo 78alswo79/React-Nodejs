@@ -15,4 +15,5 @@ npm init -y >>> node.js 설정파일 생성
 Bash
 npm install express >>> 서버 구축을 위한 Express 설치
 node app.js >>> 서버실행
+localhost:3000
 ```
