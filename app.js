@@ -26,6 +26,21 @@ app.post('/users', (req, res) => {
     });
 });
 
+app.put('/users/:id', (req, res) => {
+    const userId = req.params.id;
+    const updatedData = req.body;
+    debugger;
+    console.log(`${userId}번 유저를 다음 내용으로 수정:`, updatedData.id);
+    res.json({ message: `${userId}번 유저 수정 완료!`, updatedData });
+});
+
+app.delete('/users/:id', (req, res) => {
+    const userId = req.params.id;
+
+    console.log(`${userId}번 유저 삭제 요청 받음`);
+    res.json( {message: `${userId}번 유저가 삭제되었습니다.`} );
+});
+
 app.listen(port, () => {
     console.log(`서버가 http://localhost:${port} 에서 실행 중입니다.`);
 });
