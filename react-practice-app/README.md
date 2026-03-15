@@ -1,16 +1,26 @@
-# React + Vite
+```
+Vite 리액트 설치 및 실행 단계
+프로젝트 생성
+터미널에서 아래 명령어를 입력하여 프로젝트 뼈대를 만듭니다.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bash
+npm create vite@latest [프로젝트이름] -- --template react
+cd [프로젝트이름]
+```
 
-Currently, two official plugins are available:
+```
+Bash
+npm install  >>> 의존성(라이브러리) 설치. package.json에 명시된 필수 도구들을 node_modules 폴더에 설치합니다.
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```
+Bash
+npm run dev
+🛠 관리자 권한 및 에러 대응 (꿀팁)
+윈도우 환경에서 보안 정책(Execution Policy)으로 인해 npm 스크립트 실행이 막히는 경우가 많습니다. 이럴 때는 관리자 권한으로 파워쉘(PowerShell)을 열고 아래 명령어를 한 번만 실행해 주면 해결됩니다.
+```
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+PowerShell
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
